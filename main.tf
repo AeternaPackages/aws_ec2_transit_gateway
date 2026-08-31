@@ -89,7 +89,7 @@ locals {
       for k2, v2 in coalesce(v1.ec2_transit_gateway_metering_policies, {}) : {
         for k3, v3 in coalesce(v2.ec2_transit_gateway_metering_policy_entries, {}) :
         "${k1}/${k2}/${k3}" => merge(v3, {
-          transit_gateway_metering_policy_id = module.ec2_transit_gateway_metering_policies.ec2_transit_gateway_metering_policies_id["${k1}/${k2}"]
+          transit_gateway_metering_policy_id = module.ec2_transit_gateway_metering_policies.ec2_transit_gateway_metering_policies_transit_gateway_metering_policy_id["${k1}/${k2}"]
         })
       }
     ]...)
