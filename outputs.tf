@@ -193,11 +193,6 @@ output "ec2_transit_gateway_default_route_table_propagations_transit_gateway_rou
 }
 
 # --- aws_ec2_transit_gateway_metering_policy ---
-output "ec2_transit_gateway_metering_policies_id" {
-  description = "Map of id values across all ec2_transit_gateway_metering_policies, keyed the same as var.ec2_transit_gateway_metering_policies"
-  value       = module.ec2_transit_gateway_metering_policies.ec2_transit_gateway_metering_policies_id
-}
-
 output "ec2_transit_gateway_metering_policies_arn" {
   description = "Map of arn values across all ec2_transit_gateway_metering_policies, keyed the same as var.ec2_transit_gateway_metering_policies"
   value       = module.ec2_transit_gateway_metering_policies.ec2_transit_gateway_metering_policies_arn
@@ -494,11 +489,6 @@ output "ec2_transit_gateway_vpc_attachments_vpc_owner_id" {
 }
 
 # --- aws_ec2_transit_gateway_metering_policy_entry ---
-output "ec2_transit_gateway_metering_policy_entries_id" {
-  description = "Map of id values across all ec2_transit_gateway_metering_policy_entries, keyed the same as var.ec2_transit_gateway_metering_policy_entries"
-  value       = module.ec2_transit_gateway_metering_policy_entries.ec2_transit_gateway_metering_policy_entries_id
-}
-
 output "ec2_transit_gateway_metering_policy_entries_destination_cidr_block" {
   description = "Map of destination_cidr_block values across all ec2_transit_gateway_metering_policy_entries, keyed the same as var.ec2_transit_gateway_metering_policy_entries"
   value       = module.ec2_transit_gateway_metering_policy_entries.ec2_transit_gateway_metering_policy_entries_destination_cidr_block
